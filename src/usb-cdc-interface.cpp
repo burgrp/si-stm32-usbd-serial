@@ -31,11 +31,11 @@ namespace usbdSerial {
 		void sendByteIn(unsigned char b) {
 			bridge->sendByteIn(b);
 		}
-		
+
 		void dataSentOut() {
 			bridge->dataSentOut();
-		}		
-		
+		}
+
 		virtual void setBridge(ComBridge* bridge) {
 			this->bridge = bridge;
 		};
@@ -107,12 +107,12 @@ namespace usbdSerial {
 		virtual void writeExtraDescriptor(unsigned char** descriptor);
 		virtual void sendByteIn(unsigned char b);
 		virtual void dataSentOut();
-		
+
 		void handleControlRequest(usbd::SetupPacket* packet, int counter, unsigned char* data, int len, usbd::DefaultEndpoint* defaultEndpoint);
-		void setPort(ComPort* port);		
-		
+		void setPort(ComPort* port);
+
 	};
-	
+
 	class UartBridgeDataInterface : public usbd::UsbInterface {
 	public:
 		int interfaceNumber;
