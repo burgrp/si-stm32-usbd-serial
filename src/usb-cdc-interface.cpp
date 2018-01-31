@@ -1,17 +1,17 @@
 namespace usbdSerial {
 
-#define CDC_CHAR_FORMAT_STOP_BIT_0_0 0 
-#define CDC_CHAR_FORMAT_STOP_BIT_1_5 1 
-#define CDC_CHAR_FORMAT_STOP_BIT_2_0 2 
+	const int CDC_CHAR_FORMAT_STOP_BIT_0_0 = 0;
+	const int CDC_CHAR_FORMAT_STOP_BIT_1_5 = 1;
+	const int CDC_CHAR_FORMAT_STOP_BIT_2_0 = 2;
 
-#define CDC_PARITY_NONE 0
-#define CDC_PARITY_ODD 1
-#define CDC_PARITY_EVEN 2
-#define CDC_PARITY_MARK 3
-#define CDC_PARITY_SPACE 4 
+	const int CDC_PARITY_NONE = 0;
+	const int CDC_PARITY_ODD = 1;
+	const int CDC_PARITY_EVEN = 2;
+	const int CDC_PARITY_MARK = 3;
+	const int CDC_PARITY_SPACE = 4;
 
-#define CDC_DATA_OUT_BUFFER_LEN 64
-#define CDC_DATA_IN_BUFFER_LEN 64
+	const int CDC_DATA_OUT_BUFFER_LEN = 64;
+	const int CDC_DATA_IN_BUFFER_LEN = 64;
 
 	class ComBridge {
 	public:
@@ -136,12 +136,12 @@ namespace usbdSerial {
 
 	};
 
-#define CS_UNDEFINED                    0x20
-#define CS_DEVICE                       0x21
-#define CS_CONFIGURATION                0x22
-#define CS_STRING                       0x23
-#define CS_INTERFACE                    0x24
-#define CS_ENDPOINT                     0x25
+	const int CS_UNDEFINED = 0x20;
+	const int CS_DEVICE = 0x21;
+	const int CS_CONFIGURATION = 0x22;
+	const int CS_STRING = 0x23;
+	const int CS_INTERFACE = 0x24;
+	const int CS_ENDPOINT = 0x25;
 
 	int UartBridgeCommInterface::getExtraDescriptorSize() {
 		return 14;
@@ -166,9 +166,9 @@ namespace usbdSerial {
 		*(*descriptor)++ = dataInterface->interfaceNumber; //13 bSubordinateInterface0 1 01h Interface number of the subordinate (Data Class) interface
 	}
 
-#define SET_LINE_CODING 0x20
-#define GET_LINE_CODING 0x21
-#define SET_CONTROL_LINE_STATE 0x22
+	const int SET_LINE_CODING = 0x20;
+	const int GET_LINE_CODING = 0x21;
+	const int SET_CONTROL_LINE_STATE = 0x22;
 
 	void UartBridgeDataOutEndopoint::correctTransferOut(unsigned char* data, int len) {
 		statRx(usbd::EP_NAK);
