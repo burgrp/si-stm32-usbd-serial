@@ -1,0 +1,13 @@
+{
+	"name": "@device.farm/si-stm32-usbd-serial",
+	"version": "1.0.0",
+	"dependencies": {
+	    "@device.farm/si-stm32-usbd": "1.0.0"
+	},
+	"silicon": {
+		"sources": [
+			"src/usb-cdc-interface.cpp",
+			"src/usb-cdc-device.cpp"
+		]
+	}
+}
